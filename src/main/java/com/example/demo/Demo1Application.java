@@ -13,14 +13,5 @@ public class Demo1Application {
         SpringApplication.run(Demo1Application.class, args);
     }
 
-    @Bean
-    public WebMvcConfigurer corsConfigurer() {
-        return new WebMvcConfigurer() {
-            @Override
-            public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/login").allowedOrigins("http://localhost:8080");
-            }
-        };
-    }
 
 }

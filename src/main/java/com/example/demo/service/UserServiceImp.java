@@ -22,13 +22,14 @@ public class UserServiceImp implements UserService{
     }
 
     @Override
-    public User getUser(String username) {
+    public List<User> getUser(String username) {
+        List<User> result = new ArrayList<>();
         for (User user : users) {
             if(username.equals(user.getUsername())) {
-               return user;
+               result.add(user);
             }
         }
-        return null;
+        return result;
     }
 
 }
